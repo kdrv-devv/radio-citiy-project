@@ -8,9 +8,9 @@ const App = () => {
   return (
         <>
           <TopSotuv/>
-          {/* <EngYaxshiTaklif/>
+          <EngYaxshiTaklif/>
           <Mashxur/>
-          <Dillerlar/> */}
+          <Dillerlar/>
         </>
   )
 }

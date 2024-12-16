@@ -40,8 +40,8 @@ const TopSotuv = () => {
           </div>
         </div>
 
-        <div className="top-sale-cards flex justify-between">
-          <div className="swiper-part w-[80%]">
+        <div className="top-sale-cards flex justify-between text-[10px]">
+          <div className="swiper-part w-[75%]">
             <Swiper
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
@@ -51,7 +51,7 @@ const TopSotuv = () => {
               pagination={{
                 clickable: true,
               }}
-              breakpoints = {{
+              breakpoints={{
                 "@0.00": {
                   slidesPerView: 1,
                   spaceBetween: 10,
@@ -65,66 +65,67 @@ const TopSotuv = () => {
                   spaceBetween: 10,
                 },
                 "@1.50": {
-                  slidesPerView:4,
+                  slidesPerView: 4,
                   spaceBetween: 10,
-                },
+                }
               }}
               className="mySwiper"
             >
-
-{Array(6)
+              {Array(6)
                 .fill("")
-                .map((_, index) => (
-                  <SwiperSlide key={index}>
-                  <div className="top-sale-swiper-card rounded-[6px] w-[250px] h-[394px] shadow-[0px_2px_15px_0px_#00000033] bg-white">
-                    <div className="top-sale-card-top flex items-center justify-center px-[30px] py-[20px]">
-                      <img
-                        loading="lazy"
-                        className="w-[100%] h-[100%]"
-                        src={topSaleimg}
-                        alt="Product img"
-                      />
-                    </div>
-                    <div className="top-sale-card-bottom flex flex-col justify-between h-[37%] px-[16px]">
-                      <div className="titile">
-                        <h5 className="text-sm font-bold leading-[16.1008px] tracking-[0.04em] text-left">
-                          Fanar
-                        </h5>
-                        <h6 className="text-base font-normal leading-[1.15rem] tracking-[0.04em] text-left">
-                          NPT-SP10-ACCU (94 966), Spotligt 37LED...
-                        </h6>
+                .map((_ , index) => (
+                  <SwiperSlide key = { index }  className = "w-[200px]" >
+                    <div className="top-sale-swiper-card rounded-[0.6em] w-[100%] h-[39.4em] shadow-[0rem_0.125rem_0.9375rem_0rem_#00000033] bg-white">
+                      <div className="top-sale-card-top flex items-center justify-center px-[1.875rem] py-[1.25rem]">
+                        <img
+                          loading="lazy"
+                          className="w-[100%] h-[100%]"
+                          src={topSaleimg}
+                          alt="Product img"
+                        />
                       </div>
-                      <div className="price flex  items-end  justify-between ">
-                        <div className=" flex flex-col gap-[0.5rem]">
-                          <h5 className="text-[0.6875rem] font-normal leading-[0.7906rem] text-left text-[#E30613]">
-                            Sotuvda bor: <span>24 dona</span>
+                      <div className="top-sale-card-bottom flex flex-col justify-between h-[37%] px-[16px] md:h-[40%]">
+                        <div className="titile flex flex-col gap-[10px]">
+                          <h5 className="text-sm font-bold leading-[16.1008px] tracking-[0.04em] text-left">
+                            Fanar
                           </h5>
-                          <h4 className="text-xl font-bold leading-[1.5125rem] text-left text-black">
-                            <span>43 850</span>sum
-                          </h4>
+                          <h6 className="text-base font-normal leading-[18.4px] tracking-[0.04em] text-left">
+                            NPT-SP10-ACCU (94 966), Spotligt 37LED...
+                          </h6>
                         </div>
-                        <button className="w-[2.375rem] cursor-pointer h-[2.375rem] border border-solid border-[#D9D9D9] rounded-[100%] flex items-center justify-center">
-                          <img src={korzinkaImg} alt="" />
-                        </button>
+                        <div className="price flex  items-end  justify-between ">
+                          <div className=" flex flex-col gap-[8px]">
+                            <h5 className="text-[11px] font-normal leading-[12.6496px] text-left text-[#E30613]">
+                              Sotuvda bor: <span>24 dona</span>
+                            </h5>
+                            <h4 className="text-xl font-bold leading-[24.2px] text-left text-black">
+                              <span>43 850</span>sum
+                            </h4>
+                          </div>
+                          <button className="w-[38px] cursor-pointer h-[38px] border border-solid border-[#D9D9D9] rounded-[100%] flex items-center justify-center">
+                            <img src={korzinkaImg} alt="" />
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
                 ))}
             </Swiper>
           </div>
 
-          <div className="top-sale-card w-[14.375rem] h-[24.6875rem] px-[1.8125rem] border border-solid border-[#00415A] rounded-[0.375rem] flex flex-col justify-around ">
-            <div className="card-top flex flex-col gap-[1.25rem]">
-              <h5 className="text-lg font-bold leading-[20.6992px] tracking-[0.04em] text-left">
+          <div className="top-sale-card w-[20%] h-[39.5em] px-[2.9em] border border-solid border-[#00415A] rounded-[0.6em] flex flex-col justify-around text-[10px]">
+            <div className="card-top flex flex-col gap-[2em] text-[10px]">
+              <h5 className="text-lg font-bold leading-[2em] tracking-[0.04em] text-left">
                 Eng mashhur mahsulotlar
               </h5>
-              <h6 className="text-sm font-normal leading-[16.1008px] tracking-[0.04em] text-left">
+              <h6 className="text-sm font-normal leading-[1.6em] tracking-[0.04em] text-left">
                 Bizning mijozlarimiz tanlovi
               </h6>
             </div>
-            <button className="catalog-btn text-white flex items-center justify-center text-base font-normal leading-[1.15rem] tracking-[0.04em] text-left w-[172px] h-[42px] rounded-md transition-all bg-[#00415A] hover:bg-[#0e2b36] active:bg-[#25657f] ">
-              Katalogga o’tish
+            <button className="catalog-btn text-white flex items-center justify-center text-base font-normal leading-[1.15rem] tracking-[0.04em] text-left w-[100%] h-[42px] rounded-md transition-all bg-[#00415A] hover:bg-[#0e2b36] active:bg-[#25657f] ">
+              
+              <h5 className="lg:text-[16px] md:text-[12px]">Katalogga o’tish</h5>
+              
             </button>
           </div>
         </div>
